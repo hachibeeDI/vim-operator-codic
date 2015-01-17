@@ -1,3 +1,4 @@
+
 " vim:set sts=2 sw=2 tw=0 et:
 
 " License: MIT License {{{
@@ -35,10 +36,10 @@ function! operator#codic#do(motion_wiseness)
   let l:l = line('.')
   let l:c = col('.')
 
-  let [f_l, f_c] = getpos("'[")
-  let [e_l, e_c] = getpos("']")
-  let word = getline(f_l)[f_c:e_c]
-  echo word
+  let [f_l, f_c] = getpos("'[")[1:2]
+  let [e_l, e_c] = getpos("']")[1:2]
+  let word = tolower(getline(f_l)[f_c-1 : e_c-1])
+  execute 'Codic ' . word
 
   call cursor(l, c)
 endfunction
