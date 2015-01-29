@@ -1,10 +1,19 @@
+
 ## Usage
 
-map a `<Plug>(operator-codic)`
+set `<Plug>(operator-codic)` on your keymap.
+
+### Example
 
 ```viml
-" example
-nmap 9 <Plug>(operator-codic)
+
+NeoBundleLazy 'hachibeeDI/vim-operator-codic', {
+\ 'autoload': {
+\   'mappings' : '<Plug>',
+\ }}
+
+map x <Plug>(operator-codic)
+
 ```
 
 
