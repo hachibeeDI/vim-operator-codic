@@ -32,7 +32,7 @@ set cpo-=C
 
 
 
-function! operator#codic#do(motion_wiseness)
+function! operator#codic#do(motion_wiseness) abort
   let l:l = line('.')
   let l:c = col('.')
 
